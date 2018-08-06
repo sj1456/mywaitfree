@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>Waiting List Table</h2>
+
+<table>
+  <tr>
+    <th>No.</th>
+    <th>Name</th>
+    <th>Phone Number</th>
+  </tr>
+  {% for guest in waiting_list %}
+    <tr>
+    <td>{{ forloop.counter }}</td>
+    <td>{{ guest.guest_name }}</td>
+    <td>{{ guest.phone_number }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+<a href="{% url 'index'%}">Go back to home page</a>
+
+</body>
+</html>

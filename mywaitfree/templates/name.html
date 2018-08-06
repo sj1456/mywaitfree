@@ -1,0 +1,9 @@
+<p>Welcome to Da Mi Mi Milk Tea!!</p>
+
+<form action="/mywaitfree/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit" />
+</form>
+
+<a href="{% url 'results'%}">To see the current list</a>
