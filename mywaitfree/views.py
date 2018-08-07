@@ -13,7 +13,8 @@ def index(request):
         if form.is_valid():
             name = form.cleaned_data['guest_name']
             number = form.cleaned_data['phone_number']
-            g = Guest(guest_name=name, phone_number=number, register_time=timezone.now())
+            size = form.cleaned_data['group_size']
+            g = Guest(guest_name=name, phone_number=number, group_size=int(size), register_time=timezone.now())
             g.save()
             return HttpResponseRedirect('thanks/')
     else:

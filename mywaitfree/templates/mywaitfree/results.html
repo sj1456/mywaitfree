@@ -28,12 +28,16 @@ tr:nth-child(even) {
     <th>No.</th>
     <th>Name</th>
     <th>Phone Number</th>
+    <th>Group Size</th>
+    <th>Arrival Time</th>
   </tr>
   {% for guest in waiting_list %}
     <tr>
     <td>{{ forloop.counter }}</td>
     <td>{{ guest.guest_name }}</td>
     <td>{{ guest.phone_number }}</td>
+    <td>{{ guest.group_size }}</td>
+    <td>{{ guest.register_time }}</td>
   </tr>
   {% endfor %}
 </table>
