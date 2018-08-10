@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Contact V1</title>
+	<title>Welcome!</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
@@ -49,6 +49,13 @@
 							<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
 						</span>
 					</button>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<button class="contact1-form-btn" id="fulllist">
+						<span>
+							Result
+							<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+						</span>
+					</button>
 				</div>
  			</form>
 		</div>
@@ -60,7 +67,6 @@
 <!--===============================================================================================-->
 	<script src="{% static 'mwf/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
 <!--===============================================================================================-->
-	<script src="{% static 'mwf/vendor/bootstrap/js/popper.js' %}"></script>
 	<script src="{% static 'mwf/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
 <!--===============================================================================================-->
 	<script src="{% static 'mwf/vendor/select2/select2.min.js' %}"></script>
@@ -80,6 +86,12 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-23581568-13');
+</script>
+
+<script type="text/javascript">
+    document.getElementById("fulllist").onclick = function () {
+        location.href = "{% url 'results' %}";
+    };
 </script>
 
 <!--===============================================================================================-->
